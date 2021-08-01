@@ -1,0 +1,139 @@
+.howitworks {
+    position: relative;
+    height: 48rem;
+    background: $light-more;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    @include point(768) {
+        height: 40rem;
+    }
+    @include point(500) {
+        height: 30rem;
+    }
+    @include point(400) {
+        height: 25rem;
+    }
+    img {
+        pointer-events: none;
+    }
+    &__about {
+        width: 41rem;
+        text-align: center;
+        z-index: 999;
+        @include point(500) {
+            width: 30rem;
+        }
+        button {
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 2.5rem;
+            @include point(500) {
+                width: 5rem;
+                height: 5rem;
+                margin-bottom: 2rem;
+            }
+        }
+        h3 {
+            margin-bottom: 2rem;
+            font-size: 2.8rem;
+            @include point(500) {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        p {
+            @include point(768) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    &__point-1 {
+        position: absolute;
+        top: 5%;
+        left: 2%;
+        @include point(768) {
+            top: 2%;
+            left: 1%;
+            width: 10rem;
+        }
+        @include point(500) {
+            display: none;
+        }
+    }
+    &__point-2 {
+        position: absolute;
+        top: 75%;
+        left: 20%;
+        @include point(500) {
+            display: none;
+        }
+    }
+    &__point-3 {
+        position: absolute;
+        top: 25%;
+        left: 30%;
+        @include point(768) {
+            left: 25%;
+        }
+        @include point(500) {
+            display: none;
+        }
+    }
+    &__point-4 {
+        position: absolute;
+        top: 25%;
+        right: 30%;
+        @include point(768) {
+            top: 15%;
+        }
+        @include point(500) {
+            display: none;
+        }
+    }
+    &__point-5 {
+        position: absolute;
+        top: 50%;
+        right: 20%;
+        @include point(500) {
+            display: none;
+        }
+    }
+    &__point-6 {
+        position: absolute;
+        top: 30%;
+        right: -8%;
+        @include point(768) {
+            width: 15rem;
+        }
+        @include point(500) {
+            display: none;
+        }
+    }
+    &__point-7 {
+        position: absolute;
+        top:0%;
+        right: 0%;
+        @include point(768) {
+            width: 10rem;
+        }
+        @include point(500) {
+            display: none;
+        }
+    }
+    &__point-8 {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        @include point(768) {
+            bottom: 0%;
+            left: 0%;
+            width: 30rem;
+        }
+        @include point(500) {
+            display: none;
+        }
+    }
+}

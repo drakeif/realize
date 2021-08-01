@@ -1,0 +1,107 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
+// VARS
+@import 'vars';
+
+// font-family: 'Nunito', sans-serif;
+// font-family: 'Poppins', sans-serif; 
+
+// RESET STYLES
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: $wh;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: $text;
+    &.active {
+        overflow: hidden;
+    }
+}
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+ul {
+    list-style: none;
+}
+h1,h2,h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: $head;
+}
+// CORRECT STYLES
+.container {
+    max-width: 117rem;
+    min-width: 32rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.divider {
+    border: none;
+    border-bottom: .1rem solid $light;
+}
+// BUTTONS
+.btn {
+    padding: 1rem 2rem;
+    outline: none;
+    background: none;
+    border: .1rem solid $btn;
+    border-radius: 4rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: .2s linear;
+    @include point(768) {
+        padding: .5rem 1rem;
+    }
+    &-light {
+        color: $btn;
+        &:hover {
+            background: $btn;
+            color: $wh;
+        }
+    }
+    &-fill {
+        background: rgb(104,82,237);
+        background: linear-gradient(0deg, rgba(104,82,237,1), rgba(186,67,252,1) 100%);
+        color: $wh;
+        border: none;
+        &:hover {
+            background: linear-gradient(90deg, rgba(104,82,237,1), rgba(186,67,252,1) 100%);
+        }
+    }
+    &-without {
+        padding: 1rem 4rem 1rem 0;
+        border: none;
+        color: $btn;
+        background: url('../img/svg/arrow-right.svg') no-repeat;
+        background-position: 90% center;
+        &:hover {
+            background-position: 100% center;
+        }
+    }
+}
+// MODULES
+@import 'header';
+@import 'intro';
+@import 'cards';
+@import 'getstarted';
+@import 'howitworks';
+
+@import 'modal';
+
+

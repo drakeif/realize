@@ -1,0 +1,61 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($dark, .5);
+    backdrop-filter: blur(.5rem);
+    z-index: 999;
+    display: none;
+    place-content: center;
+    &__close {
+        background: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        transition: .2s linear;
+        &:hover {
+            transform: rotate(45deg);
+        }
+    }
+    &.active {
+        display: grid;
+    }
+    &__xl {
+        @include point(1300) {
+            display: none;
+        }
+    }
+    &__l {
+        display: none;
+        @include point(1300) {
+            display: block;
+        }
+        @include point(768) {
+            display: none;
+        }
+    }
+    &__m {
+        display: none;
+        @include point(768) {
+            display: block;
+        }
+        @include point(500) {
+            display: none;
+        }
+    }
+    &__s {
+        display: none;
+        @include point(500) {
+            display: block;
+        }
+    }
+}

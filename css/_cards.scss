@@ -1,0 +1,99 @@
+.cards {
+    padding: 5rem 0;
+    @include point(768) {
+        padding: 3rem 0;
+    }
+    @include point(600) {
+        padding: 2rem 0;
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 30rem);
+        column-gap: 1rem;
+        justify-content: space-between;
+        @include point(960) {
+            grid-template-columns: repeat(1, 60rem);
+            justify-content: center;
+            row-gap: 3rem;
+        }
+        @include point(700) {
+            grid-template-columns: repeat(1, 40rem);
+            row-gap: 2rem;
+        }
+        @include point(600) {
+            grid-template-columns: repeat(1, 30rem);
+        }
+    }
+    &__item {
+        padding: 2rem;
+        width: 30rem;
+        height: 20rem;
+        box-shadow: 0 0 .5rem .5rem (rgba($btn, .2));
+        border-radius: 1rem;
+
+        display: grid;
+        grid-template-rows: repeat(auto, 1fr);
+        cursor: pointer;
+        transition: .2s linear;
+        @include point(960) {
+            width: 60rem;
+        }
+        @include point(700) {
+            width: 40rem;
+        }
+        @include point(600) {
+            width: 30rem;
+            height: 15rem;
+            padding: 1rem;
+        }
+        &:hover {
+            background: $btn;
+            // background: linear-gradient(0deg, rgba(104,82,237,1), rgba(186,67,252,1) 100%);
+            h3 {
+                color: $wh;
+            }
+            p {
+                color: $wh;
+            }
+            i {
+                color: $wh;
+            }
+            .cards__img {
+                display: none;
+            }
+            .cards__link {
+                display: block;
+            }
+        }
+    }
+    &__img {
+        i {
+            font-size: 2rem;
+            color: $btn;
+            transition: .2s linear;
+        }
+    }
+    &__title {
+        h2 {
+            font-size: 2.2rem;
+            transition: .2s linear;
+        }
+    }
+    &__about {
+        p {
+            font-size: 1.6rem;
+            transition: .2s linear;
+        }
+    }
+    &__link {
+        display: none;
+        a {
+            color: $wh;
+            font-size: 1.6rem;
+            background: url('../img/arrow-right-white.png') no-repeat;
+            background-position: 90% center;
+            background-size: 1.8rem;
+            text-decoration: none;
+        }
+    }
+}

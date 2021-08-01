@@ -1,0 +1,95 @@
+// INTRO
+.intro {
+    position: relative;
+    padding: 10rem 0;
+    @include point(768) {
+        padding: 5rem 0;
+    }
+    @include point(500) {
+        padding: 3rem 0;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-left {
+            flex: 1 1 36rem;
+            h1 {
+                font-size: 5rem;
+                margin-bottom: 3rem;
+                @include point(768) {
+                    font-size: 4rem;
+                    margin-bottom: 2rem;
+                }
+                @include point(600) {
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                }
+            }
+            p {
+                font-size: 2.2rem;
+                margin-bottom: 4rem;
+                @include point(768) {
+                    font-size: 1.8rem;
+                    margin-bottom: 3rem;
+                }
+                @include point(600) {
+                    font-size: 1.4rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        &-right {
+            @include point(768) {
+                flex: 1 0 50%;
+            }
+            @include point(500) {
+                display: none;
+            }
+        }
+        &-btn {
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            @include point(768) {
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 1rem;
+            }
+            @include point(500) {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
+    &__scrolldown {
+        width: 11rem;
+        height: 11rem;
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 15%;
+        transition: .2s linear;
+        animation: scroll-down 1s infinite alternate ease-in-out;
+        @include point(768) {
+            width: 7rem;
+            height: 7rem; 
+        }
+        @include point(600) {
+            width: 5rem;
+            height: 5rem;
+            bottom: 20%;
+        }
+        @include point(500) {
+            display: none;
+        }
+    }
+}
+@keyframes scroll-down {
+    from {
+        transform: translate(-50%, 0);
+    }
+    to {
+        transform: translate(-50%, 10%);
+    }
+}
