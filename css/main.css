@@ -843,7 +843,7 @@ h1, h2, h3 {
           backdrop-filter: blur(0.5rem);
   z-index: 999;
   display: none;
-  place-items: center; }
+  place-content: center; }
   .modal__close {
     background: none;
     outline: none;

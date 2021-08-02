@@ -10,7 +10,7 @@
     backdrop-filter: blur(.5rem);
     z-index: 999;
     display: none;
-    place-items: center;
+    place-content: center;
     &__close {
         background: none;
         outline: none;
