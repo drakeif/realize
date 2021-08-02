@@ -843,7 +843,7 @@ h1, h2, h3 {
           backdrop-filter: blur(0.5rem);
   z-index: 999;
   display: none;
-  place-content: center; }
+  place-items: center; }
   .modal__close {
     background: none;
     outline: none;
@@ -860,7 +860,7 @@ h1, h2, h3 {
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg); }
   .modal__howitworks {
-    width: 95%; }
+    padding: 0 1rem; }
   .modal__video {
     max-width: 100%; }
   .modal.active {

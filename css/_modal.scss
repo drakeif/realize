@@ -10,7 +10,7 @@
     backdrop-filter: blur(.5rem);
     z-index: 999;
     display: none;
-    place-content: center;
+    place-items: center;
     &__close {
         background: none;
         outline: none;
@@ -27,7 +27,7 @@
         }
     }
     &__howitworks {
-        width: 95%;
+       padding: 0 1rem;
     }
     &__video {
         max-width: 100%;
