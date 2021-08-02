@@ -10,7 +10,7 @@
     backdrop-filter: blur(.5rem);
     z-index: 999;
     display: none;
-    place-content: center;
+    place-items: center;
     &__close {
         background: none;
         outline: none;
@@ -26,36 +26,14 @@
             transform: rotate(45deg);
         }
     }
+    &__howitworks {
+        width: 95%;
+    }
+    &__video {
+        max-width: 100%;
+    }
+    
     &.active {
         display: grid;
-    }
-    &__xl {
-        @include point(1300) {
-            display: none;
-        }
-    }
-    &__l {
-        display: none;
-        @include point(1300) {
-            display: block;
-        }
-        @include point(768) {
-            display: none;
-        }
-    }
-    &__m {
-        display: none;
-        @include point(768) {
-            display: block;
-        }
-        @include point(500) {
-            display: none;
-        }
-    }
-    &__s {
-        display: none;
-        @include point(500) {
-            display: block;
-        }
     }
 }

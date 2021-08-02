@@ -31,7 +31,7 @@
                     <a href="#intro" class="header__bottom-link">Home</a>
                     <a href="#cards" class="header__bottom-link">Pages</a>
                     <a href="#started" class="header__bottom-link">Services</a>
-                    <a href="#!" class="header__bottom-link">Portfolio</a>
+                    <a href="#works" class="header__bottom-link">Portfolio</a>
                     <button class="dropdown header__bottom-link">
                         Blog
                         <div class="dropdown-menu">
@@ -57,7 +57,7 @@
                     <a href="#intro">Home</a>
                     <a href="#cards">Pages</a>
                     <a href="#started">Services</a>
-                    <a href="#!">Portfolio</a>
+                    <a href="#works">Portfolio</a>
                     <a href="#!">Blog</a>
                     <a href="#!">Contact</a>
                 </div>
@@ -152,7 +152,7 @@
             </div>
         </div>
     </div>
-    <div class="howitworks">
+    <div class="howitworks" id="works">
         <div class="howitworks__about">
             <button id="mOpen">
                 <img src="./img/svg/play-button.svg" alt="play">
@@ -170,12 +170,30 @@
         <img src="./img/svg/bg-7.svg" alt="bg-7" class="howitworks__point-7">
         <img src="./img/svg/bg-8.svg" alt="bg-8" class="howitworks__point-8">
     </div>
+    <!-- PRICE -->
+    <div class="price" id="price">
+        <div class="container">
+            <div class="price__inner">
+                <div class="price__left">
+                    <div class="price__about">
+                        <h2>We offer a full range of digital marketing services</h2>
+                        <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free.</p>
+                        <div class="price__btn">
+                            <button class="btn btn-fill">View prices</button>
+                            <button class="btn btn-without">More info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price__right">
+                    <img src="./img/image-3.png" alt="image-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL -->
     <div class="modal" id="modal">
         <div class="modal__howitworks">
-            <iframe class="modal__xl" width="1280" height="720" src="https://www.youtube.com/embed/N3MCvREORVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe class="modal__l" width="720" height="480" src="https://www.youtube.com/embed/N3MCvREORVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe class="modal__m" width="480" height="270" src="https://www.youtube.com/embed/N3MCvREORVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe class="modal__s" width="320" height="180" src="https://www.youtube.com/embed/N3MCvREORVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <video src="./video/howwebsitework.mp4" class="modal__video" id="modalVideo" controls></video>
         </div>
         <button class="modal__close" id="mClose">
             <img src="./img/svg/close.svg" alt="close">

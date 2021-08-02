@@ -49,6 +49,7 @@
         }
         p {
             color: $text-2;
+            font-weight: 300;
             margin-bottom: 5rem;
             @include point(960) {
                 max-width: 25rem;

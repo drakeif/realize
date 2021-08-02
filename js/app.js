@@ -34,7 +34,8 @@ let waypoint = new Waypoint({
 // MODAL
 const modal = document.getElementById('modal'),
       mOpen = document.getElementById('mOpen'),
-      mClose = document.getElementById('mClose');
+      mClose = document.getElementById('mClose'),
+      video = document.getElementById('modalVideo');
 
 mOpen.addEventListener('click', () => {
   modal.classList.add('active');
@@ -44,4 +45,5 @@ mOpen.addEventListener('click', () => {
 mClose.addEventListener('click', () => {
   modal.classList.remove('active');
   body.classList.remove('active');
+  video.pause();
 });

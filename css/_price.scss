@@ -1,0 +1,73 @@
+.price {
+    padding: 10rem 0;
+    @include point(768) {
+        padding: 6rem 0;
+    }
+    @include point(600) {
+        padding: 4rem 0;
+    }
+    @include point(500) {
+        padding: 2rem 0;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__right {
+        img {
+            @include point(768) {
+               max-width: 30rem;
+            }
+            @include point(600) {
+                max-width: 20rem;
+            }
+        }
+        @include point(500) {
+            display: none;
+        }
+        
+    }
+    &__about {
+        max-width: 50rem;
+        @include point(768) {
+            max-width: 40rem;
+        }
+        @include point(600) {
+            max-width: 30rem;
+        }
+        @include point(500) {
+            max-width: 100%;
+        }
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            @include point(768) {
+                font-size: 2.2rem;
+                margin-bottom: 2rem;
+            }
+            @include point(600) {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+        }
+        p {
+            color: $text-2;
+            font-weight: 300;
+            margin-bottom: 5rem;
+            @include point(768) {
+                font-size: 1.4rem;
+                margin-bottom: 3rem;
+            }
+            @include point(600) {
+                margin-bottom: 2rem;
+            }
+            
+        }
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+    }
+}

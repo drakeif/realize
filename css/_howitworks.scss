@@ -6,13 +6,10 @@
     place-content: center;
     overflow: hidden;
     @include point(768) {
-        height: 40rem;
-    }
-    @include point(500) {
         height: 30rem;
     }
-    @include point(400) {
-        height: 25rem;
+    @include point(500) {
+        height: 20rem;
     }
     img {
         pointer-events: none;
@@ -20,7 +17,7 @@
     &__about {
         width: 41rem;
         text-align: center;
-        z-index: 999;
+        z-index: 998;
         @include point(500) {
             width: 30rem;
         }
@@ -45,6 +42,7 @@
             }
         }
         p {
+            font-weight: 300;
             @include point(768) {
                 font-size: 1.4rem;
             }
