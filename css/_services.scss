@@ -1,0 +1,199 @@
+.services {
+    padding: 5rem 0;
+    @include point(768) {
+        padding: 3rem 0;
+    }
+    @include point(500) {
+        padding: 2rem 0;
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 36rem);
+        grid-template-rows: auto;
+        gap: 1rem;
+        justify-content: center;
+        @include point(1200) {
+            grid-template-columns: repeat(2, 36rem);
+        }
+        @include point(800) {
+            grid-template-columns: repeat(2, 30rem);
+            gap: .5rem;
+        }
+        @include point(768) {
+            grid-template-columns: repeat(1, 100%);
+            gap: .5rem;
+        }
+    }
+    &__block {
+        display: grid;
+        place-content: center;
+        width: 36rem;
+        height: 25rem;
+        @include point(800) {
+            width: 30rem;
+            height: 18rem;
+        }
+        @include point(768) {
+            width: 100%;
+            height: 18rem;
+        }
+        &:nth-child(5) {
+            grid-column: 3 / 4;
+            grid-row: 1 / 4;
+            height: 100%;
+            @include point(1200) {
+                grid-column: 1 / 3;
+                grid-row: auto;
+                width: 100%; 
+            }
+            @include point(768) {
+                grid-column: auto;
+                grid-row: auto; 
+            }
+        }
+        &:nth-child(1) {
+            place-content: end center;
+            @include point(768) {
+                place-content: center;
+            }
+        }
+        &:nth-child(3) {
+            place-content: end center;
+            @include point(768) {
+                place-content: center;
+            }
+        }
+        &:nth-child(2) {
+            place-content: start center;
+            @include point(768) {
+                place-content: center;
+            }
+        }
+        &:nth-child(4) {
+            place-content: start center;
+            @include point(768) {
+                place-content: center;
+            }
+        }
+    }
+    &__about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 3rem 2rem;
+        width: 34rem;
+        height: 23rem;
+        background: white;
+        box-shadow: 0 0 .5rem .5rem (rgba($btn, .2));
+        border-radius: 1rem;
+        transition: .2s linear;
+        @include point(800) {
+            padding: 2rem;
+            width: 27rem;
+            height: 16rem;
+        }
+        @include point(768) {
+            width: 100%;
+        }
+        &:hover:not(.services__about-all) {
+            background: $btn;
+        }
+        &:hover {
+            .services__image {
+                display: none;
+                i {
+                    color: $wh;
+                }
+            }
+            .services__title {
+                h3 {
+                    color: $wh; 
+                }
+            }
+            .services__describe {
+                p {
+                    color: $wh;
+                }
+            }
+            .services__link {
+                display: block;
+            }
+        }
+        &-all {
+            height: 100%;
+            background: none;
+            box-shadow: none;
+            h3 {
+                font-size: 3.4rem;
+                margin-bottom: 3rem;
+                @include point(800) {
+                    font-size: 2.8rem;
+                    margin-bottom: 2rem;
+                }
+                @include point(768) {
+                    font-size: 2rem;
+                    margin-bottom: 2rem;
+                }
+            }
+            p {
+                font-size: 1.8rem;
+                color: $text-2;
+                margin-bottom: 5rem;
+                @include point(800) {
+                    margin-bottom: 3rem;
+                }
+                @include point(768) {
+                    font-size: 1.4rem;
+                    margin-bottom: 3rem;
+                }
+            }
+            button {
+               width: 15rem;
+            }
+            @include point(1200) {
+                width: 100%; 
+            }
+        }
+    }
+    &__image {
+        i {
+            font-size: 3rem;
+            color: $head;
+            transition: .2s linear;
+            @include point(800) {
+                font-size: 2rem;
+            }
+        }
+    }
+    &__title {
+        h3 {
+            font-size: 2.2rem;
+            transition: .2s linear;
+            @include point(800) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    &__describe {
+        p {
+            font-size: 1.8rem;
+            color: $text-2;
+            transition: .2s linear;
+            @include point(800) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    &__link {
+        display: none;
+        a {
+            color: $wh;
+            font-size: 1.6rem;
+            background: url('../img/arrow-right-white.png') no-repeat;
+            background-position: 90% center;
+            background-size: 1.8rem;
+            text-decoration: none;
+        }
+    }
+}
