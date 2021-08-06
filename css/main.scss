@@ -55,6 +55,8 @@ h1,h2,h3 {
 }
 // BUTTONS
 .btn {
+    position: relative;
+    z-index: 998;
     padding: 1rem 2rem;
     outline: none;
     background: none;
@@ -103,6 +105,8 @@ h1,h2,h3 {
 @import 'howitworks';
 @import 'price';
 @import 'services';
+@import 'skills';
+@import 'contact';
 
 @import 'modal';
 

@@ -1,0 +1,77 @@
+.contact {
+    margin: 5rem 0;
+    position: relative;
+    background: $light-more;
+    height: 17rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    @include point(768) {
+        margin: 3rem 0;
+    }
+    @include point(500) {
+        height: 15rem;
+        margin: 2rem 0;
+    }
+    &__inner {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+        align-items: center;
+        z-index: 998;
+        @include point(768) {
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+            row-gap: 2rem;
+        }
+        h2 {
+            font-size: 2.4rem;
+            text-align: center;
+            @include point(768) {
+                font-size: 1.8rem;  
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    &__img.img-1 {
+        position: absolute;
+        left: -20%;
+        bottom: -20%;
+        @include point(768) {
+            left: -60%;
+            bottom: -10%;
+        }
+        @include point(600) {
+            left: -80%;
+            bottom: -20%;;
+        }
+        @include point(400) {
+            left: -70%;
+            bottom: -10%;
+        }
+    }
+    &__img.img-2 {
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        @include point(768) {
+            right: 25%;
+            top: 0%;
+        }
+        @include point(500) {
+            top: -12%;
+        }
+    }
+    &__img.img-3 {
+        position: absolute;
+        right: 5%;
+        bottom: -30%;
+        @include point(400) {
+            right: -10%;
+            bottom: -40%;
+        }
+    }
+}
