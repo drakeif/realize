@@ -1,0 +1,162 @@
+.prices {
+    padding: 5rem 0;
+    @include point(700) {
+        padding: 3rem 0;
+    }
+    @include point(500) {
+        padding: 2rem 0;
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(30rem, 35rem));
+        grid-template-rows: 62rem;
+        column-gap: 1rem;
+        justify-content: space-between;
+        @include point(1000) {
+            grid-template-columns: repeat(2, minmax(30rem, 35rem));
+            justify-content: center;
+            column-gap: 3rem;
+            row-gap: 3rem;
+        }
+        @include point(700) {
+            grid-template-columns: repeat(1, minmax(30rem, 50rem));
+            column-gap: 0rem;
+            row-gap: 2rem;
+        }
+        @include point(500) {
+            grid-template-rows: 45rem;
+        }
+    }
+    &__block {
+        box-shadow: 0 0 .5rem .5rem (rgba($btn, .2));
+        border-radius: 1rem;
+        padding: 5rem;
+        @include point(500) {
+            padding: 3rem;
+        }
+        button {
+           display: flex;
+           margin: 0 auto;
+        }
+        &:nth-child(3) {
+            @include point(1000) {
+                grid-column: span 2;
+                button {
+                    margin: 0;
+                }
+            }
+            @include point(700) {
+                grid-column: auto;
+                button {
+                    margin: auto;
+                }
+            }
+        }
+    }
+    &__title {
+        position: relative;
+        margin-bottom: 6rem;
+        @include point(500) {
+            margin-bottom: 3rem;
+        }
+        &-name {
+            margin-bottom: 3rem;
+            @include point(500) {
+                margin-bottom: 1.5rem;
+            }
+            &.best-choice {
+                &:before {
+                    content: 'Best choice';
+                    display: block;
+                    text-align: center;
+                    line-height: 2.5;
+                    width: 9rem;
+                    height: 2.5rem;
+                    border-radius: 2rem;
+                    background: $choice;
+                    color: $red;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+            &:after {
+                content: '';
+                display: block;
+                background: $line;
+                width: 4rem;
+                height: 0.2rem;
+                margin: 3rem 0 0 0;
+                @include point(500) {
+                    margin: 1.5rem 0 0 0;
+                }
+            }
+            h3 {
+                font-size: 2.4rem;
+                font-weight: 700;
+                @include point(500) {
+                    font-size: 2rem;
+                }
+            }
+        }
+        &-price {
+            p {
+                color: $head;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                font-size: 7rem;
+                font-style: normal;
+                @include point(500) {
+                    font-size: 5rem;
+                }
+            }
+        }
+        &-month {
+            p {
+                font-size: 2rem;
+                font-weight: 300;
+                color: $text;
+                @include point(500) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    &__list {
+        margin-bottom: 5rem;
+        @include point(500) {
+            margin-bottom: 3rem;
+        }
+        ul {
+            li {
+                position: relative;
+                padding-left: 3rem;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    background-image: url('../img/svg/check.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    top: 10%;
+                    left: 0;
+                }
+            }
+            li:not(:last-child) {
+                color: $text-2;
+                margin-bottom: 1.5rem;
+            }
+        }
+        &-no {
+            &:before {
+                width: 1.5rem !important;
+                background-image: url('../img/svg/times.svg') !important;
+            }
+        }
+    }
+}

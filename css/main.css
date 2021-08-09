@@ -1199,6 +1199,149 @@ h1, h2, h3 {
         right: -10%;
         bottom: -40%; } }
 
+.prices {
+  padding: 5rem 0; }
+  @media only screen and (max-width: 700px) {
+    .prices {
+      padding: 3rem 0; } }
+  @media only screen and (max-width: 500px) {
+    .prices {
+      padding: 2rem 0; } }
+  .prices__inner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30rem, 35rem));
+    grid-template-rows: 62rem;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media only screen and (max-width: 1000px) {
+      .prices__inner {
+        grid-template-columns: repeat(2, minmax(30rem, 35rem));
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-column-gap: 3rem;
+                column-gap: 3rem;
+        row-gap: 3rem; } }
+    @media only screen and (max-width: 700px) {
+      .prices__inner {
+        grid-template-columns: repeat(1, minmax(30rem, 50rem));
+        -webkit-column-gap: 0rem;
+                column-gap: 0rem;
+        row-gap: 2rem; } }
+    @media only screen and (max-width: 500px) {
+      .prices__inner {
+        grid-template-rows: 45rem; } }
+  .prices__block {
+    -webkit-box-shadow: 0 0 0.5rem 0.5rem rgba(104, 82, 237, 0.2);
+            box-shadow: 0 0 0.5rem 0.5rem rgba(104, 82, 237, 0.2);
+    border-radius: 1rem;
+    padding: 5rem; }
+    @media only screen and (max-width: 500px) {
+      .prices__block {
+        padding: 3rem; } }
+    .prices__block button {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0 auto; }
+    @media only screen and (max-width: 1000px) {
+      .prices__block:nth-child(3) {
+        grid-column: span 2; }
+        .prices__block:nth-child(3) button {
+          margin: 0; } }
+    @media only screen and (max-width: 700px) {
+      .prices__block:nth-child(3) {
+        grid-column: auto; }
+        .prices__block:nth-child(3) button {
+          margin: auto; } }
+  .prices__title {
+    position: relative;
+    margin-bottom: 6rem; }
+    @media only screen and (max-width: 500px) {
+      .prices__title {
+        margin-bottom: 3rem; } }
+    .prices__title-name {
+      margin-bottom: 3rem; }
+      @media only screen and (max-width: 500px) {
+        .prices__title-name {
+          margin-bottom: 1.5rem; } }
+      .prices__title-name.best-choice:before {
+        content: 'Best choice';
+        display: block;
+        text-align: center;
+        line-height: 2.5;
+        width: 9rem;
+        height: 2.5rem;
+        border-radius: 2rem;
+        background: #E1E4ED;
+        color: #EF7171;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        right: 0; }
+      .prices__title-name:after {
+        content: '';
+        display: block;
+        background: #BA43FC;
+        width: 4rem;
+        height: 0.2rem;
+        margin: 3rem 0 0 0; }
+        @media only screen and (max-width: 500px) {
+          .prices__title-name:after {
+            margin: 1.5rem 0 0 0; } }
+      .prices__title-name h3 {
+        font-size: 2.4rem;
+        font-weight: 700; }
+        @media only screen and (max-width: 500px) {
+          .prices__title-name h3 {
+            font-size: 2rem; } }
+    .prices__title-price p {
+      color: #554D89;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 7rem;
+      font-style: normal; }
+      @media only screen and (max-width: 500px) {
+        .prices__title-price p {
+          font-size: 5rem; } }
+    .prices__title-month p {
+      font-size: 2rem;
+      font-weight: 300;
+      color: #5B5766; }
+      @media only screen and (max-width: 500px) {
+        .prices__title-month p {
+          font-size: 1.4rem; } }
+  .prices__list {
+    margin-bottom: 5rem; }
+    @media only screen and (max-width: 500px) {
+      .prices__list {
+        margin-bottom: 3rem; } }
+    .prices__list ul li {
+      position: relative;
+      padding-left: 3rem; }
+      .prices__list ul li::before {
+        content: '';
+        display: block;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-image: url("../img/svg/check.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 10%;
+        left: 0; }
+    .prices__list ul li:not(:last-child) {
+      color: #716C80;
+      margin-bottom: 1.5rem; }
+    .prices__list-no:before {
+      width: 1.5rem !important;
+      background-image: url("../img/svg/times.svg") !important; }
+
 .modal {
   position: fixed;
   width: 100%;
