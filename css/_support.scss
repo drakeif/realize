@@ -1,0 +1,52 @@
+.support {
+    padding: 5rem 0;
+    @include point(500) {
+        padding: 2rem 0;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 2rem;
+        @include point(768) {
+            flex-direction: column;
+            justify-content: center;
+            column-gap: 0;
+            row-gap: 2rem;
+        }
+        @include point(500) {
+            row-gap: 1rem;
+        }
+    }
+    &__block {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 3rem;
+        max-width: 50rem;
+        @include point(768) {
+            max-width: 100%;
+        }
+        &-img {
+            img {
+                max-width: 3.2rem;
+            }
+        }
+        &-content {
+            h3 {
+                font-size: 2.4rem;
+                margin-bottom: 2rem;
+                @include point(500) {
+                    font-size: 1.8rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+            P {
+                font-size: 1.8rem;
+                margin-bottom: 3rem;
+                @include point(500) {
+                    font-size: 1.4rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}

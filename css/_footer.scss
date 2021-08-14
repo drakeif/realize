@@ -1,0 +1,172 @@
+.footer {
+    position: relative;
+    padding: 10rem 0 0rem 0;
+    overflow: hidden;
+    @include point(768) {
+        padding: 5rem 0 0rem 0;
+    }
+    @include point(500) {
+        padding: 3rem 0 0 0;
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(30rem, 35rem));
+        justify-content: space-between;
+        @include point(900) {
+            grid-template-columns: repeat(2, minmax(30rem, 35rem));
+            justify-content: center;
+            gap: 3rem;
+        }
+        @include point(700) {
+            grid-template-columns: repeat(1, auto);
+            justify-content: stretch;
+            gap: 2rem;
+        }
+    }
+    &__contact {
+        max-width: 35rem;
+        color: $head;
+        h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: inherit;
+            @include point(500) {
+                margin-bottom: 2rem;
+            }
+        }
+        &-number {
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        &-mobile {
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-size: 2.2rem;
+                font-weight: 700;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-adress {
+            p {
+                font-size: 1.8rem;
+                line-height: 1.5;
+                margin-bottom: .5rem;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &__links {
+        h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            @include point(500) {
+                margin-bottom: 2rem;
+            }
+        }
+        h3 {
+            margin-bottom: 3rem;
+        }
+        &-list {
+            display: flex;
+            column-gap: 5rem;
+            @include point(400) {
+                column-gap: 3rem;
+            }
+            ul {
+                li:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    &__subscribe {
+        @include point(900) {
+            grid-column: span 3;
+        }
+        @include point(700) {
+            grid-column: auto;
+        }
+        &-content {
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                margin-bottom: 3rem;
+                @include point(900) {
+                    text-align: center;
+                }
+                @include point(700) {
+                    text-align: left;
+                }
+                @include point(500) {
+                    margin-bottom: 2rem;
+                }
+            }
+            input {
+                display: block;
+                width: 30rem;
+                padding: 1rem 2.5rem 1rem 2.5rem;
+                outline: none;
+                border: .1rem solid $head;
+                border-radius: 2.5rem;
+                font-family: 'Nunito', sans-serif;
+                font-size: 1.8rem;
+                color: $head;
+                background: url('../img/svg/paper-plane.svg') no-repeat;
+                background-position: 90%;
+                margin-bottom: 3rem;
+                transition: .2s linear;
+                @include point(500) {
+                    margin-bottom: 2rem;
+                }
+                &::placeholder {
+                    font-family: 'Nunito', sans-serif;
+                    font-size: 1.8rem;
+                    color: $head;
+                }
+                &:hover, &:focus {
+                    background-position: 95%;
+                }
+                @include point(900) {
+                    width: 100%;
+                }
+                @include point(900) {
+                    width: 30rem;
+                }
+            }
+            p {
+                max-width: 25rem;
+                line-height: 1.5;
+                @include point(900) {
+                    max-width: 100%;
+                }
+                @include point(900) {
+                    max-width: 25rem;
+                }
+            }
+        }
+    }
+    &__copy {
+        margin-top: 5rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        font-size: 1.6rem;
+        color: $text-2;
+        @include point(500) {
+            margin-top: 3rem;
+            font-size: 1.2rem;
+        }
+    }
+}
