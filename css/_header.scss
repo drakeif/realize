@@ -37,16 +37,7 @@
         align-items: center;
         &-nav {
             display: flex;
-            align-items: center;
-            button {
-                border: none;
-                outline: none;
-                background: none;
-                font-family: inherit;
-                font-size: 1.6rem;
-                font-weight: 400;
-                color: $text;
-            }
+            align-items: center; 
         }
         &-logo {
             margin-right: 4rem;
@@ -84,6 +75,9 @@
             @include point(400) {
                 display: none;
             }
+        }
+        &-drop {
+            cursor: pointer;
         }
     }
     &__burger {

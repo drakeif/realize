@@ -158,14 +158,6 @@ h1, h2, h3 {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      .header__bottom-nav button {
-        border: none;
-        outline: none;
-        background: none;
-        font-family: inherit;
-        font-size: 1.6rem;
-        font-weight: 400;
-        color: #5B5766; }
     .header__bottom-logo {
       margin-right: 4rem; }
       @media only screen and (max-width: 768px) {
@@ -201,6 +193,8 @@ h1, h2, h3 {
       @media only screen and (max-width: 400px) {
         .header__bottom-login {
           display: none; } }
+    .header__bottom-drop {
+      cursor: pointer; }
   .header__burger {
     display: none;
     width: 4rem;
