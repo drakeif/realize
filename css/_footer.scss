@@ -25,12 +25,12 @@
     }
     &__contact {
         max-width: 35rem;
-        color: $head;
+        color: $text;
         h3 {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 3rem;
-            color: inherit;
+            color: $head;
             @include point(500) {
                 margin-bottom: 2rem;
             }
@@ -44,7 +44,7 @@
         &-mobile {
             a {
                 text-decoration: none;
-                color: inherit;
+                color: $head;
                 font-size: 2.2rem;
                 font-weight: 700;
                 &:hover {
